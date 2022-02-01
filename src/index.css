@@ -1,13 +1,63 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+  --primary-color: #171a20cc;
+}
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Condensed', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.btn {
+  margin: .5rem;
+  padding: .7rem 1.5rem;
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255, 255, 255, .1);
+  width: 90%;
+  color: #f6f6f6;
+  cursor: pointer;
+}
+
+.btn-dark {
+  background: rgba(0, 0, 0, .5);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, .4);
+}
+.btn-dark:hover {
+  background: rgba(0, 0, 0, .8);
 }

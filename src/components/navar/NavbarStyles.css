@@ -1,0 +1,131 @@
+.navbar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 5;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    color: #f6f6f6;
+    z-index: 5;
+
+
+}
+
+.hamburger {
+    display: none;
+    padding: 1rem;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    padding: 1rem;
+}
+
+.nav-menu li a {
+    color: #f6f6f6;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 940px) {
+    .hamburger {
+        display: block;
+        z-index: 5;
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu {
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        height: 100vh;
+        background: var(--primary-color);
+        top: 0;
+        right: -100%;
+        transition: 0.9s ease-in-out;
+    }
+
+    .active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        margin: .5rem;
+    }
+
+    .nav-menu li a {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu li:hover {
+        border-bottom: 1px solid #aaa;
+        width: 175px;
+    }
+
+    .nav-menu button {
+        margin: 1rem auto;
+        padding: .7rem 1.5rem;
+        font-size: 1.2rem;
+        border-radius: 25px;
+        border: none;
+        background: rgba(255, 255, 255, .3);
+        width: 100%;
+        color: #f6f6f6;
+    }
+
+    .nav-menu button:hover {
+        background: rgba(255, 255, 255, .1);
+    }
+
+    .nav-menu .social-icons {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 1rem;
+    }
+
+    .nav-menu .icon {
+        color: #f8f8f8cc;
+        font-size: 1.4rem;
+    }
+
+    .hide {
+        display: none;
+    }
+
+   .navbar .slide-right {
+        margin-left: 45%;
+        transition: .8s ease-in-out;
+    }
+}
+@media screen and (max-width: 495px) {
+    .nav-menu {
+        width: 75%;
+    }
+
+    .navbar .slide-right {
+        margin-left: 30%;
+    }
+}
